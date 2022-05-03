@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: black;
+}
+
+:root{
+    --main-color: #DFD945;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.bg-main {
+    background-color: var(--main-color);
+}
+
+.borderRightLeft {
+    position: relative;
+    overflow: hidden;
+}
+
+.borderRightLeft::before {
+    height: 2px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: var(--main-color);
+    transform: translateX(-100%);
+    transition: 0.2s ease-in-out;
+}
+
+.borderRightLeft:hover::before {
+    transform: translateX(0);
+}
+
+.bg-abovethefold {
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(black,transparent), url('./media/nasa.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+
+.bg-features {
+    background: linear-gradient(black, transparent, black),url('./media/explorefondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.letter-space {
+    letter-spacing: 3px;
+}
+
+.btn-esa {
+    background:
+     linear-gradient(to right, var(--main-color) 2px, transparent 2px) 0 0, 
+     linear-gradient(to right, var(--main-color) 2px, transparent 2px) 0 100%, 
+     linear-gradient(to left,var(--main-color) 2px,transparent 2px) 100% 0,
+     linear-gradient(to left,var(--main-color) 2px,transparent 2px) 100% 100%,
+     linear-gradient(to bottom, var(--main-color) 2px, transparent 2px) 0 0, 
+     linear-gradient(to bottom, var(--main-color) 2px, transparent 2px) 100% 0, 
+     linear-gradient(to top,var(--main-color) 2px,transparent 2px)  0 100%,
+     linear-gradient(to top,var(--main-color) 2px,transparent 2px) 100% 100%;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+}
+
+.btn-esa:hover {
+    letter-spacing: 3px;
+}   
+/* imagenes de categorías */
+.img-category{
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    height: 300px;
+   margin-bottom: 10px;
+   margin-top: 20px;
+}
+.borderRightLeftcategory{
+    position: relative;
+    overflow: hidden;
+}
+.borderRightLeftcategory::before{
+    height: 2px;
+    width: 75%;
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 0px;
+    background-color: var(--main-color);
+
+}
+.bg-footer {
+    width: 100vw;
+    background: linear-gradient(black, transparent, rgba(0, 0, 0, 0)),url('./media/footer.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
